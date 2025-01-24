@@ -1,8 +1,10 @@
 ---
-title: 站点导航
 permalink: /article/qbgt53bk/
-createTime: 2025/01/23 14:31:43
+title:
+createTime: 
 ---
+
+<h1><Icon name="iconoir:internet" color="#5086a1"/>站点导航</h1>
 
 ## web
 
@@ -110,6 +112,10 @@ href="https://www.vultr.com/"
 <LinkCard
 title="阿里云"
 href="https://www.aliyun.com/"
+/>
+<LinkCard
+title="万网域名"
+href="https://wanwang.aliyun.com/"
 />
 ::::
 

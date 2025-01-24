@@ -7,9 +7,9 @@ config:
     full: true
     background: tint-plate
     hero:
-      name: 钱俊林
-      tagline: 个人博客
-      text: beta v0.0.1
+      name: 钱俊林的个人博客
+      tagline: Keep Coding && Writing
+      text: —— 学物理是为了能更好地调试扣杀的弧线
       actions:
         -
           theme: brand
