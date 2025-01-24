@@ -26,6 +26,7 @@
     "vuepress-theme-plume": "1.0.0-rc.129"
   },
   "dependencies": {
-    "@iconify/json": "^2.2.299"
+    "@iconify/json": "^2.2.299",
+    "mermaid": "^11.4.1"
   }
 }
