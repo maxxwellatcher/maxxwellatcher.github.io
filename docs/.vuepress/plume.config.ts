@@ -41,11 +41,11 @@ export default defineThemeConfig({
    */
   profile: {
     // avatar: 'https://theme-plume.vuejs.press/plume.png',
-    avatar: "/.vuepress/public/xiaomumu.jpg",
+    avatar: "/xiaomumu.jpg",
     name: '钱俊林',
-    description: 'this is my blog',
-    // circle: true,
-    // location: '',
+    description: '朝闻道，夕死可矣',
+    circle: true,
+    location: '深圳',
     // organization: '',
   },
 

@@ -12,7 +12,9 @@
     "docs:dev-clean": "vuepress dev docs --clean-cache --clean-temp",
     "docs:build": "vuepress build docs --clean-cache --clean-temp",
     "docs:preview": "http-server docs/.vuepress/dist",
-    "vp-update": "npx vp-update"
+    "vp-update": "npx vp-update",
+    "dev": "vuepress dev docs",
+    "product": "vuepress build docs --clean-cache --clean-temp && http-server docs/.vuepress/dist"
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.19",

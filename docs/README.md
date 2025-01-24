@@ -9,7 +9,7 @@ config:
     hero:
       name: 钱俊林
       tagline: 个人博客
-      text: 0.0.1版本
+      text: beta v0.0.1
       actions:
         -
           theme: brand

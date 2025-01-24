@@ -38,6 +38,11 @@ icon="fluent:circle-edit-20-regular"
 href="https://icon-sets.iconify.design/"
 />
 <LinkCard
+title="iconfont"
+icon="hugeicons:clothes"
+href="https://www.iconfont.cn/"
+/>
+<LinkCard
 title="React"
 icon="logos:react"
 href="https://zh-hans.react.dev/"
@@ -49,7 +54,7 @@ href="https://www.electronjs.org/zh/"
 />
 ::::
 
-## node
+## 服务端
 :::: card-grid
 <LinkCard
 title="node"
@@ -65,6 +70,11 @@ href="https://www.npmjs.com/"
 title="express"
 icon="devicon:express"
 href="https://expressjs.com/"
+/>
+<LinkCard
+title="axios"
+icon="simple-icons:axios"
+href="https://www.axios-http.cn/"
 />
 ::::
 
@@ -91,7 +101,7 @@ href="https://fortran-lang.org/zh_CN/index"
 />
 ::::
 
-## 云服务器
+## 云服务
 :::: card-grid
 <LinkCard
 title="Vultr"
