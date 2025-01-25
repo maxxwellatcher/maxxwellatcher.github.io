@@ -103,7 +103,7 @@ export default defineUserConfig({
       //   chartjs: true,
       //   echarts: true,
         mermaid: true,
-      //   flowchart: true,
+        // flowchart: true,
       },
 
       /**
