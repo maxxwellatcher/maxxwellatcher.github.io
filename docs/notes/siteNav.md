@@ -147,6 +147,11 @@ title="VS Code Themes"
 href="https://vscodethemes.com/"
 description="vscode主题插件在线预览"
 />
+<LinkCard
+title="mermaid"
+href="https://mermaid.js.org/"
+description="文本形式绘图工具"
+/>
 ::::
 
 ## 优秀博客/github仓库/个人站点
