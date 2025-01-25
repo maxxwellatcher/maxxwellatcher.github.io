@@ -1,5 +1,5 @@
 ---
-title: mermaid简易教程
+title: mermaid入门说明
 createTime: 2025/01/25 10:06:36
 permalink: /article/cdn7ea3o/
 tags:
