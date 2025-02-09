@@ -110,8 +110,8 @@ export default defineUserConfig({
        *  markdown power
        * @see https://theme-plume.vuejs.press/config/plugin/markdown-power/
        */
-      // markdownPower: {
-      //   pdf: true,          // 启用 PDF 嵌入 @[pdf](/xxx.pdf)
+      markdownPower: {
+        pdf: true,          // 启用 PDF 嵌入 @[pdf](/xxx.pdf)
       //   caniuse: true,      // 启用 caniuse 语法  @[caniuse](feature_name)
       //   plot: true,         // 启用隐秘文本语法 !!xxxx!!
       //   bilibili: true,     // 启用嵌入 bilibili视频 语法 @[bilibili](bid)
@@ -131,7 +131,7 @@ export default defineUserConfig({
       //     kotlin: true,     // ::: kotlin-repl
       //   },
       //   imageSize: 'local', // 启用 自动填充 图片宽高属性，避免页面抖动
-      // },
+      },
 
       /**
        * 在 Markdown 文件中导入其他 markdown 文件内容。
