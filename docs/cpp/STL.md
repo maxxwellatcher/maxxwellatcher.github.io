@@ -6,10 +6,6 @@ tags:
   - 未完待续
 permalink: /article/cpp/stl/
 ---
-目录
-
-[[TOC]]
-
 STL 提供了通用模板和函数，实现了对常用算法和数据结构的封装。
 
 通常而言可以 STL 可以分为六大组件：
