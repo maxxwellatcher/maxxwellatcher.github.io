@@ -2,6 +2,7 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
 
+const password = '456123';
 export default defineUserConfig({
   base: '/',
   lang: 'zh-CN',
@@ -174,6 +175,10 @@ export default defineUserConfig({
      * 加密功能
      * @see https://theme-plume.vuejs.press/guide/features/encryption/
      */
-    // encrypt: {},
+    encrypt: {
+      rules: {
+        "notes/操作系统的浅见": password
+      }
+    },
   }),
 })
