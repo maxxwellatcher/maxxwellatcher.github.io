@@ -2,6 +2,9 @@
 title: 多线程编程：pthread库常用函数
 createTime: 2025/02/12 18:27:11
 permalink: /article/dpglr3em/
+tags:
+  - C
+  - Linux
 ---
 
 pthread库是事实上的Linux下多线程编程的标准接口，虽然C++标准库也提供了线程库支持，但是pthread库更为底层和强大。
