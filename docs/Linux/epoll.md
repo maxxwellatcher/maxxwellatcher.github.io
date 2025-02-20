@@ -1,6 +1,6 @@
 ---
 title: I/O多路复用：epoll
-createTime: 2025/02/18 00:21:20
+createTime: 2025/02/15 00:21:20
 permalink: /article/isb6nouc/
 tags:
   - C

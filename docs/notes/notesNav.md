@@ -12,4 +12,12 @@ title="操作系统的浅见"
 href="/notes/操作系统的浅见/README.md"
 />
 
+<LinkCard
+title="自定义TCP协议网盘项目"
+/>
+
+<LinkCard
+title="Reactor+ThreadPool源码"
+/>
+
 ::::
