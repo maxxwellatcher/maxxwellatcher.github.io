@@ -5,6 +5,7 @@ permalink: /article/5uxx4vcu/
 tags:
   - 前端
   - TS
+  - 未完待续
 ---
 [TypeScript JSDoc 应用及其局限性](https://zhuanlan.zhihu.com/p/670568566)
 
