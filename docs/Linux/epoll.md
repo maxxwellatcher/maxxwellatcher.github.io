@@ -240,3 +240,92 @@ int main()
 }
 
 ```
+
+## eventfd
+
+eventfd 是一个 Linux 内核提供的文件描述符，用于高效地通知事件的发生。它通常与 epoll 或其他 I/O 多路复用机制一起使用，以实现进程或者线程之间的通信。
+
+其内部实现了计数器，当计数器为0时，使用`read()`读取该文件描述符则发生阻塞；若计数器不为0，则计数减1。也可以使用`write()`，增加当前计数。
+
+```c
+// 原型
+int eventfd(unsigned int initval, int flags);
+```
+
+argument：
++ `initval`：[in]。初始时计数器的值。
++ `flags`：[in]。标志位，`Linux 2.6.26`之前，这个标志位没有用途，只能填入`0`。之后版本增加了几个标志位，其中`EFD_NONBLOCK`最常用，表示使用`read()`不会阻塞。
+
+returns：
++ 成功：返回eventfd文件描述符
++ 失败：返回-1，并设置`errno`
+
+::: code-tabs
+
+@tab Linux标准示例
+```c
+#include <err.h>
+#include <inttypes.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/eventfd.h>
+#include <unistd.h>
+
+int
+main(int argc, char *argv[])
+{
+    int       efd;
+    uint64_t  u;
+    ssize_t   s;
+
+    if (argc < 2) {
+        fprintf(stderr, "Usage: %s <num>...\n", argv[0]);
+        exit(EXIT_FAILURE);
+    }
+
+    efd = eventfd(0, 0);
+    if (efd == -1)
+        err(EXIT_FAILURE, "eventfd");
+
+    switch (fork()) {
+    case 0:
+        for (size_t j = 1; j < argc; j++) {
+            printf("Child writing %s to efd\n", argv[j]);
+            u = strtoull(argv[j], NULL, 0);
+                    /* strtoull() allows various bases */
+            s = write(efd, &u, sizeof(uint64_t));
+            if (s != sizeof(uint64_t))
+                err(EXIT_FAILURE, "write");
+        }
+        printf("Child completed write loop\n");
+
+        exit(EXIT_SUCCESS);
+
+    default:
+        sleep(2);
+
+        printf("Parent about to read\n");
+        s = read(efd, &u, sizeof(uint64_t));
+        if (s != sizeof(uint64_t))
+            err(EXIT_FAILURE, "read");
+        printf("Parent read %"PRIu64" (%#"PRIx64") from efd\n", u, u);
+        exit(EXIT_SUCCESS);
+
+    case -1:
+        err(EXIT_FAILURE, "fork");
+    }
+}
+```
+
+:::
+
+因为`evfd`文件描述符总是可以写入，所以epoll监听它的可写事件没有意义。通常来说，使用epoll监听它的可读事件。
+
+一个线程写，触发epoll所在线程可读事件，从而实现线程之间的通信，这是最常见的用法。
+
+非标准的扩展glibc特性的封装函数，简化对`evfd`的读写操作：
+
+```c
+int eventfd_read(int fd, eventfd_t *value);
+int eventfd_write(int fd, eventfd_t value);
+```
