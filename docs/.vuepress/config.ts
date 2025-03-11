@@ -178,7 +178,7 @@ export default defineUserConfig({
     encrypt: {
       rules: {
         "notes/操作系统的浅见": password,
-        "Linux/Reactor+ThreadPool": password
+        // "Linux/Reactor+ThreadPool": password
       }
     },
   }),
