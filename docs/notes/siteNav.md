@@ -54,6 +54,16 @@ title="Electron"
 icon="logos:electron"
 href="https://www.electronjs.org/zh/"
 />
+<LinkCard
+title="Sass"
+icon="devicon:sass"
+href="https://sass-lang.com/"
+/>
+<LinkCard
+title="Less"
+icon="catppuccin:less"
+href="https://less.bootcss.com/"
+/>
 ::::
 
 ## 服务端
