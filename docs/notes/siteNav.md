@@ -196,4 +196,10 @@ icon="la:blog"
 href="https://www.ruanyifeng.com/"
 description="大佬的闲谈见闻"
 />
+<LinkCard
+title="Modern CMake 现代中文版"
+icon="devicon:cmake"
+href="https://modern-cmake-cn.github.io/Modern-CMake-zh_CN/"
+description="最好的CMake入门中文教程"
+/>
 ::::

@@ -2,6 +2,8 @@
 title: mmap零拷贝技术
 createTime: 2025/02/23 21:54:31
 permalink: /article/ltu3zeor/
+tags:
+  - Linux
 ---
 
 文件IO中，数据首先拷贝到内核缓冲区，然后再拷贝到用户空间。
